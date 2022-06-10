@@ -4,16 +4,15 @@ import '../styles/question.scss'
 type QuestionProps = {
   children?: ReactNode;
   content: string;
-  key: string;
   author: {
     name: string;
     avatar: string;
   }
 }
 
-export function Question({content, author, key, children}: QuestionProps) {
+export function Question({content, author, children}: QuestionProps) {
   return (
-    <div className="question" key={key}>
+    <div className="question">
       <p>{content}</p>
       <footer>
         <div className="user-info">
