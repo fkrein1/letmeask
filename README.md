@@ -1,13 +1,17 @@
 # Letmeask
-A application similar to slido that let users create Q&A rooms with upvote functionalities.
-
+Create an Q&A room and let your audience ask questions and upvote the best ones.
+### Technologies
+* Typescript
+* React
+* Sass
+* Firebase
 ### Figma layout
 <a href="https://www.figma.com/file/DdiDUFXs9lec5qKaVfBeo0/Letmeask-(Community)?node-id=0%3A1">
 https://www.figma.com/file/DdiDUFXs9lec5qKaVfBeo0/Letmeask-(Community)?node-id=0%3A1
 </a>
 
 ### Firebase setup
-Create a new Firebase project with Google authentication and realtime database.
+Create a new Firebase project with Google Authentication and Realtime Database.
 <br>
 Use the project keys to create a .env.local file in the root of your project.
 #### Root file: .env.local
