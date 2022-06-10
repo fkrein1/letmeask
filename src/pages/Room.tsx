@@ -1,6 +1,5 @@
 import { FormEvent, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { json } from 'stream/consumers';
 import logoImg from '../assets/logo.svg';
 import { Button } from '../components/Buttons';
 import { RoomCode } from '../components/RoomCode';
