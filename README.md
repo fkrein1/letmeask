@@ -1,15 +1,16 @@
 # Letmeask
 Create an Q&A room and let your audience ask questions and upvote the best ones.
+<br>
+<br>
+<a href="https://letmeask-8f3d9.web.app/">Letmeask Firebase Deployment</a>
+</br>
+</br>
+<img src="./letmeask.png" alt="image of letmeask" />
 ### Technologies
 * Typescript
 * React
 * Sass
 * Firebase
-### Figma layout
-<a href="https://www.figma.com/file/DdiDUFXs9lec5qKaVfBeo0/Letmeask-(Community)?node-id=0%3A1">
-https://www.figma.com/file/DdiDUFXs9lec5qKaVfBeo0/Letmeask-(Community)?node-id=0%3A1
-</a>
-
 ### Firebase setup
 Create a new Firebase project with Google Authentication and Realtime Database.
 <br>
@@ -23,27 +24,4 @@ REACT_APP_PROJECT_ID="your_project_id"
 REACT_APP_STORAGE_BUCKET="your_storage_bucket"
 REACT_APP_MESSAGING_SENDER_ID="your_sender_id"
 REACT_APP_APP_ID="your_app_key"
-```
-#### Realtime database rules
-```json
-{
-  "rules": {
-    "rooms": {
-      ".read": false,
-      ".write": "auth != null",
-      "$roomId": {
-        ".read": true,
-        ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",
-        "questions": {
-          ".read": true,
-          ".write": "auth != null && (!data.exists() || data.parent().child('authorId').val() == auth.id)",
-          "likes": {
-            ".read": true,
-            ".write": "auth != null && (!data.exists() || data.child('authorId').val() == auth.id)",  
-          }
-        }
-      }
-    }
-  }
-}
 ```
